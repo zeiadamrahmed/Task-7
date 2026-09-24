@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moderna-facebook</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+    />
+    <link
+      rel="icon"
+      href="./img/Gemini_Generated_Image_kzovaqkzovaqkzov.jfif"
+      type="image/x-icon"
+    />
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand bg-white border-bottom fixed-top px-2 py-1 shadow-sm"
+    >
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+      >
+        <!-- القسم الأيمن: اللوجو ومربع البحث / العدسة -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- اللوجو (يختفي عند الضغط على البحث) -->
+          <div class="collapse show" id="fbLogo">
+            <a
+              class="navbar-brand me-0 text-primary fw-bold fs-2 d-flex align-items-center"
+              href="#"
+            >
+              <i class="bi bi-facebook fs-1"></i>
+            </a>
+          </div>
+
+          <!-- 1. العدسة فقط للشاشات الصغيرة (Mobile) -->
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-secondary rounded-circle d-flex align-items-center justify-content-center d-md-none"
+            style="width: 40px; height: 40px"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#fbLogo"
+            aria-expanded="true"
+            aria-controls="fbLogo"
+          >
+            <i class="bi bi-search fs-6"></i>
+          </button>
+
+          <!-- 2. مربع البحث الكامل للشاشات المتوسطة والكبيرة -->
+          <div class="d-none d-md-block">
+            <div class="input-group">
+              <span
+                class="input-group-text bg-body-tertiary border-0 rounded-start-pill ps-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#fbLogo"
+              >
+                <i class="bi bi-search text-secondary"></i>
+              </span>
+              <input
+                type="search"
+                class="form-control bg-body-tertiary border-0 rounded-end-pill pe-3 shadow-none"
+                placeholder="بحث في فيسبوك"
+                data-bs-toggle="collapse"
+                data-bs-target="#fbLogo"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- القسم الأوسط: أيقونات التنقل (تظهر على الشاشات الكبيرة) -->
+        <div class="d-none d-md-flex justify-content-center flex-grow-1 mx-5">
+          <ul class="navbar-nav d-flex justify-content-around w-100 max-w-lg">
+            <li class="nav-item hvr-glow hvr-glow">
+              <a
+                class="nav-link text-primary border-bottom border-primary border-3 fs-4 px-1 py-2"
+                href="#"
+              >
+                <i class="bi bi-house-door-fill"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="fa-solid fa-square-caret-right"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="bi bi-people"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="bi bi-shop"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="fa-regular fa-circle-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- القسم الأيسر -->
+        <div class="d-flex align-items-center gap-2">
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            <i class="bi bi-grid-3x3-gap-fill fs-5"></i>
+          </button>
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            <i class="bi bi-messenger fs-5"></i>
+          </button>
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            <i class="bi bi-bell-fill fs-5"></i>
+          </button>
+          <a
+            href="./facebook-profil.html"
+            class="d-flex align-items-center text-decoration-none ms-1"
+          >
+            <img
+              src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+              alt="Profile"
+              class="rounded-circle"
+              width="40"
+              height="40"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- الصفحه الرئيسيه -->
+
+    <div class="container-fluid pt-5 mt-5">
+      <!-- استخدام flex-nowrap لضمان عدم خروج الأعمدة أسفل بعضها -->
+      <div class="row align-items-start vh-100 overflow-hidden">
+        <!-- 1. القائمة الجانبية اليمنى (يسكرول لوحده) -->
+        <div class="col-xl-3 d-none d-xl-block h-100 overflow-y-auto pb-5">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <h6 class="fw-bold text-secondary mb-3">القائمة</h6>
+            <div class="list-group list-group-flush">
+              <a
+                href="./facebook-profil.html"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <img
+                  src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+                  alt="Profile"
+                  class="rounded-circle"
+                  width="30"
+                  height="30"
+                />
+                موديرنا
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="fa-brands fa-meta text-primary me-2"></i> meta AI
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="bi bi-people-fill text-primary me-2"></i> الأصدقاء
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="bi bi-clock-history text-primary me-2"></i> الذكريات
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="bi bi-bookmark-fill text-primary me-2"></i> العناصر
+                المحفوظة
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="bi bi-play-btn-fill text-primary me-2"></i> ريلز
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="fa-regular fa-circle-user text-primary me-2"></i>
+                المجموعات
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="fa-solid fa-store text-primary me-2"></i> marketplace
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="fa-solid fa-newspaper text-primary me-2"></i> الأخبار
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="fa-solid fa-calendar text-primary me-2"></i> المناسبات
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+              >
+                <i class="fa-solid fa-chart-simple text-primary me-2"></i> مدير
+                الإعلانات
+              </a>
+              <!-- الحاوية الأب اللي بتربط الاتنين ببعض -->
+              <div id="moreMenuAccordion">
+                <!-- الجزء الأول: زرار "عرض المزيد" - مفتوح من الأول -->
+                <div
+                  class="collapse show"
+                  id="showMoreWrap"
+                  data-bs-parent="#moreMenuAccordion"
+                >
+                  <button
+                    class="list-group-item list-group-item-action border-0 rounded-3 d-flex align-items-center gap-3 py-2 fw-semibold text-secondary w-100"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreMenu"
+                    aria-expanded="false"
+                    aria-controls="moreMenu"
+                  >
+                    <i
+                      class="fa-solid fa-chevron-down fs-6 text-center"
+                      style="width: 25px"
+                    ></i>
+                    <span>عرض المزيد</span>
+                  </button>
+                </div>
+
+                <!-- الجزء الثاني: العناصر المخفية + زرار "عرض أقل" - مقفول من الأول -->
+                <div
+                  class="collapse"
+                  id="moreMenu"
+                  data-bs-parent="#moreMenuAccordion"
+                >
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i
+                      class="fa-brands fa-facebook-messenger text-primary me-2"
+                    ></i>
+                    messenger
+                  </a>
+
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i class="fa-regular fa-image text-primary me-2"></i>
+                    أحدث نشاط إعلاني
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i class="fa-solid fa-gift text-primary me-2"></i>
+                    أعيادالميلاد
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i class="fa-solid fa-flag text-primary me-2"></i>
+                    الصفحات
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i class="fa-brands fa-cc-mastercard text-primary me-2"></i>
+                    الطلبات وعمليات الدفع
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i class="fa-brands fa-openai text-primary me-2"></i>
+                    دردشه مع أدوات الذكاء الأصطناعي
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i class="fa-solid fa-gamepad text-primary me-2"></i>
+                    لعب ألعاب
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action border-0 rounded-3 py-2"
+                  >
+                    <i
+                      class="fa-solid fa-picture-in-picture text-primary me-2"
+                    ></i>
+                    مقاطع فيديو الألعاب
+                  </a>
+
+                  <button
+                    class="list-group-item list-group-item-action border-0 rounded-3 d-flex align-items-center gap-3 py-2 fw-semibold text-secondary w-100"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#showMoreWrap"
+                    aria-expanded="false"
+                    aria-controls="showMoreWrap"
+                  >
+                    <i
+                      class="fa-solid fa-chevron-up fs-6 text-center"
+                      style="width: 25px"
+                    ></i>
+                    <span>عرض أقل</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. الجزء الأوسط  -->
+        <div class="col-12 col-xl-6 bg-light h-100 overflow-y-auto pb-5">
+          <!-- كارت إنشاء منشور -->
+          <div class="card border-0 mb-3 shadow-sm">
+            <div class="card-body d-flex align-items-center gap-2">
+              <img
+                src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+                class="rounded-circle"
+                width="40"
+                height="40"
+                alt="Profile"
+              />
+              <input
+                type="text"
+                class="form-control bg-light border-0 rounded-pill px-3"
+                placeholder="بم تفكر ..........؟"
+              />
+            </div>
+          </div>
+
+          <!-- p1 -->
+          <div class="card border-0 shadow-sm mb-3">
+            <div class="card-body">
+              <!-- هيدر المنشور -->
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img
+                  src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+                  class="rounded-circle"
+                  width="40"
+                  height="40"
+                  alt="Profile"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold">
+                    موديرنا للأثاث
+                    <a class="text-decoration-none ms-1" href="#">متابعة</a>
+                  </h6>
+                  <small class="text-muted">منذ ساعتين</small>
+                </div>
+
+                <div
+                  class="ms-auto align-self-start d-flex align-items-center gap-2"
+                >
+                  <sup class="fs-5 fw-bold mb-0">...</sup>
+                  <i class="fa-solid fa-xmark text-dark fs-4"></i>
+                </div>
+              </div>
+
+              <!-- محتوى النص -->
+              <p class="card-text mb-3">
+                "الذهبي.. لمسة الملوك في بيتك" ✨🛋️
+                <br />
+                حوّلي غرفة معيشتك لتحفة فنية بلمسات كلاسيكية-مودرن ساحرة. طقم
+                الكنب الأبيض الفاخر بتفاصيله المذهبة الدقيقة وخامته الراقية،
+                يعطيكِ الأناقة التي تحلمين بها مع الراحة المثالية.
+                <br />
+                🌟 لماذا هذا الطقم؟
+                <br />
+                تصميم انسيابي وعصري بلمسة ذهبية ملكية.
+                <br />
+                وسائد مريحة بأقمشة ذات جودة عالية وتفاصيل بارزة مميزة.
+                <br />
+                يتماشى بامتياز مع الديكورات الذهبية والمرايا المبتكرة لتشكيل
+                لوحة فنية داخل منزلك.
+                <br />
+                📩 لطلب التفاصيل أو الأسعار، ابعثي لنا رسالة الآن.
+                <br />
+                🚛 التوصيل متوفر لجميع المناطق.
+                <br />
+                #أثاث #ديكور #ذهبي #كنب #فخامة #تصميم_داخلي
+              </p>
+
+              <!-- صورة المنشور -->
+              <img
+                src="./img/pexels-artbovich-7535045.jpg"
+                class="img-fluid rounded w-100"
+                alt="Post Image"
+              />
+            </div>
+
+            <!--  التفاعلات -->
+            <div
+              class="d-flex justify-content-around align-items-center text-secondary"
+            >
+              <i class="bi bi-hand-thumbs-up fs-4" style="cursor: pointer"></i>
+              <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+              <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+            </div>
+          </div>
+          <!-- p2 -->
+          <div class="card border-0 shadow-sm mb-3">
+            <div class="card-body">
+              <!-- هيدر المنشور -->
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img
+                  src="./img/668043793_928081933189233_6130297135125505117_n.jpg"
+                  class="rounded-circle"
+                  width="40"
+                  height="40"
+                  alt="Profile"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold">
+                    قصر الباشا
+                    <a class="text-decoration-none ms-1" href="#">متابعة</a>
+                  </h6>
+                  <small class="text-muted">منذ ساعه</small>
+                </div>
+
+                <div
+                  class="ms-auto align-self-start d-flex align-items-center gap-2"
+                >
+                  <sup class="fs-5 fw-bold mb-0">...</sup>
+                  <i class="fa-solid fa-xmark text-dark fs-4"></i>
+                </div>
+              </div>
+
+              <!-- محتوى النص -->
+              <p class="card-text mb-3">
+                ✨ البساطة والشياكة في تصميم واحد! ✨
+                <br />
+                دولاب مودرن بتفاصيل هادية بتجمع بين الأبيض الراقي ولمسات الخشب
+                الدافئة، مع أظلاف زجاجية/مرايا عاكسة بتدي مساحة وإضاءة غاية في
+                الأناقة لغرفتك.
+                <br />
+                🌟 مميزات التصميم:
+                <br />
+                تقسيم عملي وذكي: مساحات تخزين واسعة تتسع لكل احتياجاتك.
+                <br />
+                تكسيات وبديل خشب عالي الجودة : لمسات ديكورية عصرية بخطوط طولية
+                شيك جداً.
+                <br />
+                مرايا/زجاج فخم: بيدي اتساع ورقي للغرفة.
+                <br />
+                💬 ابعتلنا رسالة على الصفحة لمعرفة التفاصيل والأسعار!
+              </p>
+
+              <!-- صورة المنشور -->
+              <img
+                src="./img/668680253_928083683189058_3683897554369933152_n.jpg"
+                class="img-fluid rounded w-100"
+                alt="Post Image"
+              />
+            </div>
+
+            <!--  التفاعلات -->
+            <div
+              class="d-flex justify-content-around align-items-center text-secondary"
+            >
+              <i class="bi bi-hand-thumbs-up fs-4" style="cursor: pointer"></i>
+              <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+              <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+            </div>
+          </div>
+          <!-- p3 -->
+          <div class="card border-0 shadow-sm mb-3">
+            <div class="card-body">
+              <!-- هيدر المنشور -->
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img
+                  src="./img/p1.jpg"
+                  class="rounded-circle"
+                  width="40"
+                  height="40"
+                  alt="Profile"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold">
+                    Bazooka Fried Chicken
+                    <i class="fa-solid fa-certificate text-primary"></i>
+                    <a class="text-decoration-none ms-1" href="#">متابعة</a>
+                  </h6>
+                  <small class="text-muted">منذ دقيقه</small>
+                </div>
+
+                <div
+                  class="ms-auto align-self-start d-flex align-items-center gap-2"
+                >
+                  <sup class="fs-5 fw-bold mb-0">...</sup>
+                  <i class="fa-solid fa-xmark text-dark fs-4"></i>
+                </div>
+              </div>
+
+              <!-- محتوى النص -->
+              <p class="card-text mb-3">
+                هلا بالخميس ب ١٥٠ بس بكره ف مدينه بدر🔥🔥 عرض الافتتاح ٥ قطع
+                فرايد تشيكن بدون اجنحه و عيش 😎 مع أكبر افتتاح يوم الخميس ٢٤ / ٩
+                ف مدينه بدر💪🏻 عنوان مدينه بدر : مول دوان تاون طريق سعد زغلول
+                بجوار دار مصر انتهاء العرض الساعه ٩ مساءا اقصى عدد عرضين لكل
+                عميل
+              </p>
+
+              <!-- صورة المنشور -->
+              <img
+                src="./img/p2.jfif"
+                class="img-fluid rounded w-100"
+                alt="Post Image"
+              />
+            </div>
+
+            <!--  التفاعلات -->
+            <div
+              class="d-flex justify-content-around align-items-center text-secondary"
+            >
+              <i class="bi bi-hand-thumbs-up fs-4" style="cursor: pointer"></i>
+              <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+              <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. القائمة الجانبية اليسرى (يسكرول لوحده) -->
+        <div class="col-xl-3 d-none d-xl-block h-100 overflow-y-auto pb-5">
+          <div class="p-3 rounded-3 shadow-sm">
+            <h6 class="fw-bold text-muted mb-3">مُموَّل</h6>
+            <div class="p-2 mb-3 text-center small text-muted">
+              <!-- 1 -->
+              <a
+                class="text-decoration-none text-dark"
+                href="https://lavaniagroup.com/products/14435"
+              >
+                <div class="card mb-3 border-0 bg-transparent">
+                  <div class="row g-2 align-items-center">
+                    <div class="col-5">
+                      <div class="ratio ratio-1x1">
+                        <img
+                          src="./img/2305.jpg"
+                          class="rounded-3 object-fit-cover"
+                          alt="...."
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-7">
+                      <div class="card-body p-0">
+                        <h6 class="card-title mb-1 fw-bold fs-6 text-dark">
+                          اكتشف لافانيا
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- 2 -->
+              <a
+                class="text-decoration-none"
+                href="https://muscleraw.net/product/42604185"
+              >
+                <div class="card mb-3 border-0 h-100 w-100">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-5">
+                      <img
+                        src="./img/104aa394-9122-4542-9521-d3c001ec0cd1.avif"
+                        class="img-fluid w-100 h-100 rounded-start object-fit-cover"
+                        alt="..."
+                      />
+                    </div>
+
+                    <div class="col-7">
+                      <div class="card-body">
+                        <h6 class="card-title mb-1 fw-bold fs-6 text-dark">
+                          Creatine + Citrulline Malate
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <hr />
+            <!--  -->
+            <h6 class="fw-bold text-muted mb-3">جهات الاتصال</h6>
+            
+            <div class="d-flex flex-column align-items-start gap-2 py-2">
+              <a
+                href="./facebook-profil.html"
+                class="list-group-item list-group-item border-0 rounded-3 py-2"
+              >
+                <img
+                  src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+                  alt="Profile"
+                  class="rounded-circle"
+                  width="30"
+                  height="30"
+                />
+                موديرنا
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item border-0 rounded-3 py-2"
+              >
+                <i class="fa-brands fa-meta text-primary me-2"></i> meta AI
+              </a>
+            </div>
+            <hr />
+            <h6 class="fw-bold text-muted mb-3">دردشات جماعية</h6>
+            <i class="fa-solid fa-plus"></i> إنشاء دردشه جماعية
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

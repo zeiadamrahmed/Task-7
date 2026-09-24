@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moderna-facebook</title>
+    <link
+      rel="icon"
+      href="./img/Gemini_Generated_Image_kzovaqkzovaqkzov.jfif"
+      type="image/x-icon"
+    />
+    <!-- MDB -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+    />
+    <!-- boot strap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- fon awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand bg-white border-bottom fixed-top px-2 py-1 shadow-sm"
+    >
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+      >
+        <!-- القسم الأيمن: اللوجو ومربع البحث / العدسة -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- اللوجو (يختفي عند الضغط على البحث) -->
+          <div class="collapse show" id="fbLogo">
+            <a
+              class="navbar-brand me-0 text-primary fw-bold fs-2 d-flex align-items-center"
+              href="#"
+            >
+              <i class="bi bi-facebook fs-1"></i>
+            </a>
+          </div>
+
+          <!-- 1. العدسة فقط للشاشات الصغيرة (Mobile) -->
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-secondary rounded-circle d-flex align-items-center justify-content-center d-md-none"
+            style="width: 40px; height: 40px"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#fbLogo"
+            aria-expanded="true"
+            aria-controls="fbLogo"
+          >
+            <i class="bi bi-search fs-6"></i>
+          </button>
+
+          <!-- 2. مربع البحث الكامل للشاشات المتوسطة والكبيرة -->
+          <div class="d-none d-md-block">
+            <div class="input-group">
+              <span
+                class="input-group-text bg-body-tertiary border-0 rounded-start-pill ps-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#fbLogo"
+              >
+                <i class="bi bi-search text-secondary"></i>
+              </span>
+              <input
+                type="search"
+                class="form-control bg-body-tertiary border-0 rounded-end-pill pe-3 shadow-none"
+                placeholder="بحث في فيسبوك"
+                data-bs-toggle="collapse"
+                data-bs-target="#fbLogo"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- القسم الأوسط: أيقونات التنقل (تظهر على الشاشات الكبيرة) -->
+        <div class="d-none d-md-flex justify-content-center flex-grow-1 mx-5">
+          <ul class="navbar-nav d-flex justify-content-around w-100 max-w-lg">
+            <li class="nav-item hvr-glow">
+              <a
+                class="nav-link border-3 fs-4 px-1 py-2"
+                href="./facebook.html"
+              >
+                <i class="bi bi-house-door-fill"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="fa-solid fa-square-caret-right"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="bi bi-people"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="bi bi-shop"></i>
+              </a>
+            </li>
+            <li class="nav-item hvr-glow">
+              <a class="nav-link text-secondary fs-4 px-1 py-2" href="#">
+                <i class="fa-regular fa-circle-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- القسم الأيسر: أزرار القائمة والرسائل والإشعارات والصورة الشخصية -->
+        <div class="d-flex align-items-center gap-2">
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            <i class="bi bi-grid-3x3-gap-fill fs-5"></i>
+          </button>
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            <i class="bi bi-messenger fs-5"></i>
+          </button>
+          <button
+            class="btn btn-secondary bg-body-tertiary border-0 text-dark rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            <i class="bi bi-bell-fill fs-5"></i>
+          </button>
+          <a
+            href="./facebook-profil.html"
+            class="d-flex align-items-center text-decoration-none ms-1"
+          >
+            <img
+              src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+              alt="Profile"
+              class="rounded-circle"
+              width="40"
+              height="40"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- الحاوية الرئيسية للبروفايل -->
+    <div class="container-fluid p-0 my-0 pt-5 mt-4">
+      <div class="card border-0 rounded-0 shadow-sm overflow-hidden">
+        <div class="position-relative mb-5 pb-3">
+          <!-- صورة الغلاف -->
+
+          <img
+            src="./img/Gemini_Generated_Image_kzovaqkzovaqkzov.jfif"
+            class="card-img-top w-100"
+            style="height: 280px; object-fit: cover"
+            alt=""
+          />
+          <!-- <a href="./products.html">
+            <button
+              type="button"
+              class="btn btn-outline-danger position-absolute top-0 start-0 m-2"
+              style="z-index: 10; width: 80px"
+            >
+              رجوع
+            </button>
+          </a> -->
+          <!-- صورة البروفايل -->
+          <div
+            class="position-absolute start-0 top-100 translate-middle-y ms-4"
+          >
+            <img
+              src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+              class="rounded-circle border border-white border-4 shadow"
+              style="width: 170px; height: 170px; object-fit: cover"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- اسم المستخدم والبيانات -->
+        <div class="card-body pt-4 px-4 pb-4">
+          <div class="d-flex gap-4" style="margin-right: 170px">
+            <div><strong class="fw-bold">90</strong> منشور</div>
+            <div><strong class="fw-bold">19.5k</strong> متابع</div>
+            <div><strong class="fw-bold">10</strong> يتابع</div>
+          </div>
+          <h3 class="fw-bold mt-3">
+            موديرنا للأثاث <i class="fa-solid fa-certificate text-primary"></i>
+          </h3>
+          <p class="text-muted small">
+            صناعة الأثاث المودرن والكلاسيكي بأعلى معايير الجودة لتأثيث منزلك ❤
+          </p>
+          <a
+            href="./instagram.html"
+            class="text-decoration-none fw-bold link-dark"
+          >
+            moderna_factory <i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- postat-->
+    <div class="container my-4">
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">
+                ركنك المفضل للاسترخاء في بيتك! 🛋️✨
+                <br />
+                بعد يوم شغل طويل، مفيش أحسن من مكان مريح تقعد فيه تقرأ كتابك
+                المفضل أو تشرب قهوتك في هدوء. بنقدم لك الكرسي الكابيتونيه
+                المودرن بتصميمه المريح مع الطاولة الجانبية الخشبية والأباجورة
+                لتكملة ديكور بيتك بأرقى لمسة.
+                <br />
+                مميزات الطقم: قماش فاخر وسهل التنظيف. حشو إسفنج عالي الكثافة
+                لراحة تدوم خشب طبيعي متين وأرجل خشبيّة بتصميم مودرن. طاولة
+                جانبية بـ درج تخزين ومساحة للكتب والـ Decor.
+                <br />
+                اكتب "تفاصيل" في تعليق ويوصلك السعر والمواصفات في رسالة فوراً!
+                📩
+                <br />
+                🚚 التوصيل متاح لجميع المحافظات مع المعاينة قبل الاستلام!
+              </p>
+            </div>
+            <img
+              src="./img/pexels-aj-ahamad-767001191-28319155.jpg"
+              class="card-img-bottom"
+              alt=""
+            />
+            <div class="card-footer bg-white border-top py-2">
+              <div
+                class="d-flex justify-content-around align-items-center text-secondary"
+              >
+                <!-- icon -->
+                <i
+                  class="bi bi-hand-thumbs-up fs-4"
+                  style="cursor: pointer"
+                ></i>
+                <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+                <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">
+                الملكية والأناقة تجتمع في بيتك! 👑✨
+                <br />
+                إذا كنت تبحث عن الفخامة والتميز، فإن هذا الطقم الكلاسيكي المذهب
+                مصنوع خصيصاً لأصحاب الذوق الرفيع.
+                <br />
+                ✨ تفاصيل الطقم:
+                <br />الصالون: حفر يدوي مذهب بأفخر أنواع الأقمشة باللون النبيذي
+                والأوف وايت الفاخر.
+                <br />
+                سفرة ملكية: طاولة سفرة تسع 8 أفراد مع كراسي مذهبة ذات ظهر مرتفع
+                ومزين بالتفاصيل الكلاسيكية.
+                <br />
+                التصميم: يجمع بين الفخامة والراحة ليكون واجهة بيتك أمام ضيوفك.
+                <br />
+                📩 اكتب "كلاسيك" في التعليقات لتصلك كافة التفاصيل والأسعار في
+                رسالة فوراً!
+                <br />
+                🚚 التوصيل متاح لجميع المحافظات مع المعاينة قبل الاستلام.
+              </p>
+            </div>
+            <video
+              src="./video/v1.mp4"
+              class="card-img-bottom w-100"
+              style="max-height: 450px; object-fit: cover"
+              controls
+            ></video>
+            <div class="card-footer bg-white border-top py-2">
+              <div
+                class="d-flex justify-content-around align-items-center text-secondary"
+              >
+                <!-- icon -->
+                <i
+                  class="bi bi-hand-thumbs-up fs-4"
+                  style="cursor: pointer"
+                ></i>
+                <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+                <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">
+                "الذهبي.. لمسة الملوك في بيتك" ✨🛋️
+                <br />
+                حوّلي غرفة معيشتك لتحفة فنية بلمسات كلاسيكية-مودرن ساحرة. طقم
+                الكنب الأبيض الفاخر بتفاصيله المذهبة الدقيقة وخامته الراقية،
+                يعطيكِ الأناقة التي تحلمين بها مع الراحة المثالية.
+                <br />
+                🌟 لماذا هذا الطقم؟
+                <br />
+                تصميم انسيابي وعصري بلمسة ذهبية ملكية.
+                <br />
+                وسائد مريحة بأقمشة ذات جودة عالية وتفاصيل بارزة مميزة.
+                <br />
+                يتماشى بامتياز مع الديكورات الذهبية والمرايا المبتكرة لتشكيل
+                لوحة فنية داخل منزلك.
+                <br />
+                📩 لطلب التفاصيل أو الأسعار، ابعثي لنا رسالة الآن.
+                <br />
+                🚛 التوصيل متوفر لجميع المناطق.
+                <br />
+                #أثاث #ديكور #ذهبي #كنب #فخامة #تصميم_داخلي
+                <br />
+              </p>
+            </div>
+            <img
+              src="./img/pexels-artbovich-7535045.jpg"
+              class="card-img-bottom"
+              alt=""
+            />
+            <div class="card-footer bg-white border-top py-2">
+              <div
+                class="d-flex justify-content-around align-items-center text-secondary"
+              >
+                <!-- icon -->
+                <i
+                  class="bi bi-hand-thumbs-up fs-4"
+                  style="cursor: pointer"
+                ></i>
+                <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+                <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">
+                البساطة هي عنوان الفخامة! 🤍✨
+                <br />
+                طقم مودرن أنيق يناسب المساحات العصرية، يمنحك شعوراً بالهدوء
+                والراحة في كل زاوية.
+                <br />
+                ✨ مميزات التصميم:
+                <br />
+                طاولة طعام دائرية: بتصميم عصري وكراسي بوكليت مريحة بأرجل معدنية
+                مذهبة.
+                <br />
+                أنتريه مودرن: كنب بتصميم انسيابي باللون الأبيض الكريمي مع وسائد
+                متباينة تضيف لمسة جمالية.
+                <br />
+                خامات فاخرة: قماش بوكليت عالي الجودة وسهل التنظيف.
+                <br />
+                📩 اكتب "مودرن" في التعليقات ليصلك السعر والمواصفات الكاملة!
+                <br />
+                🚚 التوصيل متاح لكل المحافظات مع ضمان الجودة والمعاينة.
+              </p>
+            </div>
+            <video
+              src="./video/v2.mp4"
+              class="card-img-bottom w-100"
+              style="max-height: 450px; object-fit: cover"
+              controls
+            ></video>
+            <div class="card-footer bg-white border-top py-2">
+              <div
+                class="d-flex justify-content-around align-items-center text-secondary"
+              >
+                <!-- icon -->
+                <i
+                  class="bi bi-hand-thumbs-up fs-4"
+                  style="cursor: pointer"
+                ></i>
+                <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+                <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">
+                "لمّة العيلة مابتحلاش غير في مكان مريح وشيك!" ☕🛋️💙
+                <br />
+                اجمعي عائلتك وضيوفك في مجلس يعكس روح العصر والراحة الحقيقية. طقم
+                المجالس المودرن ذو التصميم الدائري المبتكر باللون الأزرق المنعش،
+                هو الخيار الأمثل للمساحات المفتوحة وغرف المعيشة العصرية.
+                <br />
+                🌟 أبرز المميزات:
+                <br />
+                تصميم دائري متكامل يشجع على التواصل والتقارب.
+                <br />
+                قماش فاخر ومريح بألوان متناسقة (أزرق ورمادي).
+                <br />
+                يجمع بين الجمال الوظيفي والتصميم الأنيق الذي يناسب نمط حياتك
+                المودرن.
+                <br />
+                📩 لطلب الأسعار أو المقاسات، تواصلي معنا عبر الرسائل.
+                <br />
+                🚛 متوفر خدمة الشحن السريع لجميع المحافظات.
+                <br />
+                #مجالس #مودرن #أثاث_منزلي #ديكور #تجهيز_شقق #لون_أزرق
+                #غرفة_معيشة
+              </p>
+            </div>
+            <img
+              src="./img/pexels-atulm0han-33349415.jpg"
+              class="card-img-bottom"
+              alt=""
+            />
+            <div class="card-footer bg-white border-top py-2">
+              <div
+                class="d-flex justify-content-around align-items-center text-secondary"
+              >
+                <!-- icon -->
+                <i
+                  class="bi bi-hand-thumbs-up fs-4"
+                  style="cursor: pointer"
+                ></i>
+                <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+                <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">
+                جلسة مريحة وإطلالة ساحرة تتناغم مع بيتك! 🌿🛋️
+                <br />
+                تصميم فريد لصالون مودرن واسع يدمج بين الفخامة والراحة التامة،
+                مثالي للمساحات الكبيرة والإطلالات الزجاجية المفتوحة.
+                <br />
+                ✨ تفاصيل الطقم:
+                <br />
+                جلسة واسعة: أطقم كنب وكراسي بوف (Armchairs) بتصميم عصري وألوان
+                محايدة راقية.
+                <br />
+                طاولات جانبية ووسطية: بتشطيبات رخامية فاخرة وقواعد معدنية أنيقة.
+                <br />
+                جودة وتدوم: إسفنج عالي الكثافة مع خامات مقاومة للاستخدام اليومي.
+                <br />
+                📩 اكتب "جلسة" في التعليقات للتواصل واستلام التفاصيل فوراً!
+                <br />
+                🚚 التوصيل متاح لجميع المحافظات مع المعاينة قبل الاستلام.
+              </p>
+            </div>
+            <video
+              src="./video/v3.mp4"
+              class="card-img-bottom w-100"
+              style="max-height: 450px; object-fit: cover"
+              controls
+            ></video>
+            <div class="card-footer bg-white border-top py-2">
+              <div
+                class="d-flex justify-content-around align-items-center text-secondary"
+              >
+                <!-- icon -->
+                <i
+                  class="bi bi-hand-thumbs-up fs-4"
+                  style="cursor: pointer"
+                ></i>
+                <i class="bi bi-chat fs-4" style="cursor: pointer"></i>
+                <i class="bi bi-reply-fill fs-4" style="cursor: pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- boot strap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

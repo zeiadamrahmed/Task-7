@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- رابط مكتبة Hover.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!--  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--  -->
+
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- boot strap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <title>Moderna</title>
+
+    <link
+      rel="icon"
+      href="./img/Gemini_Generated_Image_kzovaqkzovaqkzov.jfif"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- start nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand hvr-glow">Moderna</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active hvr-glow"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hvr-glow" href="./products.html">products</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hvr-glow"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Link
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item hvr-radial-in" href="./facebook.html"
+                    >facebook</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item hvr-radial-in" href="./instagram.html"
+                    >instagram</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex me-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+
+          <div>
+            <a href="#" class="text-dark fs-5"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end nav bar -->
+
+    <!-- start carousel-->
+    <div class="card">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./img/pexels-atulm0han-33349415.jpg   "
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/pexels-artbovich-7535045.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/pexels-pixabay-276528.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- end carousel-->
+
+    <div class="container-fluid p-0 my-4 bg-white position-relative">
+      <!-- زر السهم الشمال -->
+      <button class="scroll-btn left-btn" onclick="scrollSlider(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!--  المنتجات -->
+      <div
+        data-aos="flip-up"
+        class="animate__animated animate__bounce product-slider d-flex gap-3 overflow-x-auto py-3 px-5"
+        id="productSlider"
+      >
+        <div class="product-card flex-shrink-0">
+          <!-- 
+          عشان الصوره تعمل دوران 360 درجه
+           style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+
+        <div class="product-card flex-shrink-0">
+          <img
+            src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+        <div class="product-card flex-shrink-0">
+          <img
+            src="./img/living-room-and-dining-room-with-tv-unit-idea.jpg"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+
+        <div class="product-card flex-shrink-0">
+          <img
+            src="./img/pexels-aj-ahamad-767001191-28319155.jpg"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+        <div class="product-card flex-shrink-0">
+          <img
+            src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=500"
+            alt="Table"
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+
+        <div class="product-card flex-shrink-0">
+          <img
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+
+        <div class="product-card flex-shrink-0">
+          <img
+            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+
+        <div class="product-card flex-shrink-0">
+          <img
+            src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=500"
+            alt=""
+            style="transition: transform 0.7s ease"
+            onmouseover="this.style.transform = 'rotate(360deg)'"
+            onmouseout="this.style.transform = 'rotate(0deg)'"
+          />
+        </div>
+      </div>
+
+      <!-- زر السهم اليمين -->
+      <button class="scroll-btn right-btn" onclick="scrollSlider(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <!-- عشان تخلي الاسهم تشتغل  -->
+    <script>
+      function scrollSlider(direction) {
+        const slider = document.getElementById("productSlider");
+        // جلب عرض أول كارت + المسافة بين الكروت (gap)
+        const cardWidth =
+          slider.querySelector(".product-card").offsetWidth + 16;
+
+        // التمرير لمسافة كارت واحد فقط
+        slider.scrollBy({
+          left: direction * cardWidth,
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <!-- المنتجات -->
+    <div zoom-in-down class="row g-4 justify-content-center text-end">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in-down">
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/pexels-esranurkalay-25237143.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              ركنة مودرن واسعة ومريحة بتصميم هادي يرفع شكل الصالة ويدي قعدة
+              مريحة للبيت
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-down"
+        data-aos-delay="100"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/photo_2026-08-20_20-06-52.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              طقم صالون مذهب شيك بتفاصيل كلاسيك فاخرة تليق بأي صالة استقبال ضيوف
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-down"
+        data-aos-delay="200"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/MarbellaDiningSet6_1.webp"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              سفرة دائرية مودرن مع كراسيها المريحة، مناسبة جداً للوجبات اليومية
+              والمساحات المتوسطة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-down"
+        data-aos-delay="300"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/f6.webp"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              انتريه عصري متعدد القطع يوفر لك أقصى درجات الراحة والمرونة في
+              تنظيم المساحات الكبيرة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/images.jfif"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              انتريه مودرن واسع بتصميم مريح وترابيزة زجاجية بتكمل شكل صالة
+              المعيشة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/668043793_928081933189233_6130297135125505117_n.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              ركنة كحلي مودرن بتصميم تنجيد فاخر ومريح يديك قعدة مريحة للبيت
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/668658825_928081909855902_1343152339201334034_n.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              كنبة مودرن واسعة بقماش رمادي ناعم وخداديات مريحة تناسب الصالات
+              المفتوحة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/668680253_928083683189058_3683897554369933152_n.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              دولاب مودرن أبيض بمساحة تخزين كبيرة وتقسيم عملي يلم كل أغراضك
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-up"
+        data-aos-delay="100"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/dining-table-in-living-room-ideas-for-your-home.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              طقم معيشة كامل بتصميم هادي يرفع شكل الصالة ويوفر مساحة قعدة واسعة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-up"
+        data-aos-delay="200"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/pexels-aj-ahamad-767001191-28319155.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              كرسي ريكلاينر مع كومودينو شيك كزاوية قراءة أو استرخاء مريحة في
+              الأوضة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/pexels-pixabay-276528.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              طقم صالون كبير بمقاعد واسعة بتفاصيل فاخرة تليق بأي صالة استقبال
+              ضيوف
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        data-aos="zoom-in-up"
+        data-aos-delay="400"
+      >
+        <div class="card h-100 hvr-grow-shadow">
+          <img
+            src="./img/photo_2026-08-20_20-08-42.jpg"
+            class="card-img-top custom-card-img"
+            alt="Furniture Item"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              كنبة مودرن بيج بتصميم هادي وقماش مريح يناسب مختلف ديكورات المنازل
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+    <!-- boot strap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- anm -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
